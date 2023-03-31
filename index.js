@@ -2,7 +2,7 @@
  * @Author: yuheng li a1793138
  * @Date: 2023-03-30 18:21:13
  * @LastEditors: yuheng 
- * @LastEditTime: 2023-03-31 00:45:17
+ * @LastEditTime: 2023-03-31 12:22:18
  * @FilePath: \express\routes\index.js
  * @Description: 
  * 
@@ -115,7 +115,34 @@ router.get('/main.html', function(req, res,next) {
         res.redirect("/first.html");
     }
 });
+//part 4
+let color4 =["red","yellow","green","blue"];
+let color4Visited = 0;
 
+router.get("/color.txt", function(req, res,next){
+    let color =color4[color4Visited];
+    color4Visited++;
+    if (color4Visited>=4)
+    {
+        color4Visited=0;
+    }
+    res.send(color);
+});
 
+//end of 4.2
+//4.3
+
+let jsontime =[];
+router.get("/log.json", function(req, res,next){
+    let now  = String(new Date());
+    jsontime.push(now);
+    res.send(JSON.stringify(jsontime));
+});
+
+router.get("/log-ro.json", function(req, res,next){
+    res.send(JSON.stringify(jsontime));
+});
+
+//end of 4.3
 module.exports = router;
 

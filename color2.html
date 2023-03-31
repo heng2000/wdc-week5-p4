@@ -1,0 +1,41 @@
+<!--
+ * @Author: yuheng li a1793138
+ * @Date: 2023-03-31 10:07:19
+ * @LastEditors: yuheng 
+ * @LastEditTime: 2023-03-31 10:32:10
+ * @FilePath: \express\public\color2.html
+ * @Description: 
+ * 
+ * Copyright (c) ${2023} by ${yuheng li}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            prac 4
+        </title>
+    </head>
+    <body>
+        <h1 id ="heading"></h1>
+        <button onclick="sendRequest()">snedrequest</button>
+        <script>
+            function sendRequest(){
+                let xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState==4 && xhr.status==200)
+                    {
+                        let h1 =document.getElementById("heading");
+                        h1.innerText =xhr.responseText;
+                        h1.style.color =xhr.response;
+                        // console.log(xhr.responseText);
+                    }
+                }
+                xhr.open("get",'/color.txt');
+                xhr.send();
+
+            }
+
+        </script>
+    </body>
+
+</html>
