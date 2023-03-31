@@ -1,5 +1,3 @@
-curl --request GET \
-  --url https://google.com \
-  --header 'accept: */*' \
-  --header 'user-agent: insomnia/2022.1.0' \
-  --head
+curl --request HEAD \
+  --url https://google.com/ \
+  --cookie '1P_JAR=2023-03-27-09; AEC=AUEFqZciElPl5EufGx5m-mqHVewUj8Zxo9DHI8dfUCsv3b7S3SkPWdW0JOY; NID=511%3Dsp-MTd2A0XfpCqEbxBwhVEzGvAPLHYIyDROrgqsAgpKFH58CgbAraSLSGVfQJwymBIJ80Pq_2kvKaUdbgHxxvHqlzjQZ5ShRGnBbhf8wQI3n27a83IdfhsBodhYE66ZuJYXPbUfZwD1JbpdZwST21lW_QrJjXrPTM3M88MOYc2Q'
