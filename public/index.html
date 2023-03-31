@@ -2,8 +2,8 @@
  * @Author: yuheng li a1793138
  * @Date: 2023-03-30 20:19:11
  * @LastEditors: yuheng 
- * @LastEditTime: 2023-03-31 00:58:51
- * @FilePath: \express\public\index.html
+ * @LastEditTime: 2023-03-31 20:36:39
+ * @FilePath: \wdc-week5-p4\public\index.html
  * @Description: 
  * 
  * Copyright (c) ${2023} by ${yuheng li}, All Rights Reserved. 
@@ -15,20 +15,10 @@
             prac 4
         </title>
     </head>
-    <body>
+    <body onclick="findex">
         <h1>My Prac 4 Express Server</h1>
         <p id ="timer"></p>
-        <script>
-            let xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function(){
-                if (xhr.readyState == 4 &&xhr.status == 200)
-                {
-                    document.getElementById("timer").innerText =`This page was last viewed ${xhr.response}`;
-                }
-            }
-            xhr.open("get","/last.txt");
-            xhr.send();
-        </script>
+        <script src="./javascripts/ku.js"></script>
     </body>
 
 </html>

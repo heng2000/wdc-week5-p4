@@ -18,24 +18,7 @@
     <body>
         <h1 id ="heading"></h1>
         <button onclick="sendRequest()">snedrequest</button>
-        <script>
-            function sendRequest(){
-                let xhr = new XMLHttpRequest();
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState==4 && xhr.status==200)
-                    {
-                        let h1 =document.getElementById("heading");
-                        h1.innerText =xhr.responseText;
-                        h1.style.color =xhr.response;
-                        // console.log(xhr.responseText);
-                    }
-                }
-                xhr.open("get",'/color.txt');
-                xhr.send();
-
-            }
-
-        </script>
+        <script src="./javascripts/ku.js"></script>
     </body>
 
 </html>
