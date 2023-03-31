@@ -1,0 +1,5 @@
+curl --request GET \
+  --url https://google.com \
+  --header 'accept: */*' \
+  --header 'user-agent: insomnia/2022.1.0' \
+  --head
